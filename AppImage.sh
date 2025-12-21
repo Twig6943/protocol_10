@@ -31,7 +31,7 @@ for ext in so; do
 done
 
 # Copy exec
-cp protocol_10 ./AppDir/bin/
+#cp ./linux-/protocol_10 ./AppDir/bin/
 
 # Make AppImage
 ./quick-sharun --make-appimage
