@@ -42,6 +42,7 @@
 
 # AppImage related
 AppDir/
+dist/
 *.AppImage
 appinfo
 quick-sharun
