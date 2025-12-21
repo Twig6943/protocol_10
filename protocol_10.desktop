@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Protocol 10
+Comment=A decompiler for frosty tool suite
+StartupWMClass=protocol10 # Placeholder
+Exec=protocol_10 %f
+Terminal=true
+Icon=protocol_10
+Type=Application
+Categories=Development
