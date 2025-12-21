@@ -16,6 +16,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Install dependencies
+        run: |
+          set -x
+          sudo apt install -y zsync
+
       - name: Package as AppImage
         run: |
           set -x
