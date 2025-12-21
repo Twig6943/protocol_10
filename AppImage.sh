@@ -16,7 +16,7 @@ export DEPLOY_VULKAN=0
 export DEPLOY_DOTNET=0
 
 #Remove leftovers
-rm -rf AppDir dist
+rm -rf AppDir dist appinfo
 
 # ADD LIBRARIES
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
