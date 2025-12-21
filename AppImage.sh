@@ -23,7 +23,7 @@ wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
 chmod +x ./quick-sharun
 
 # Point to your binaries
-./quick-sharun ./protocol_10 /AppDir/bin/protocol_10
+./quick-sharun ./linux-$(uname -r)/protocol_10 /AppDir/bin/protocol_10
 
 # Copy rest safely
 for ext in so; do
@@ -31,7 +31,7 @@ for ext in so; do
 done
 
 # Copy exec
-#cp ./linux-/protocol_10 ./AppDir/bin/
+cp ./linux-$(uname -r)/protocol_10 ./AppDir/bin/
 
 # Make AppImage
 ./quick-sharun --make-appimage
