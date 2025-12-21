@@ -1,0 +1,30 @@
+name: Build AppImage
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build on Ubuntu (${{ matrix.arch }})
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        arch: [x64, arm64]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Package as AppImage
+        run: |
+          set -x
+          chmod +x AppImage.sh
+          ./AppImage.sh
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-${{ matrix.arch }}-build
+          path: |
+            dist/*
