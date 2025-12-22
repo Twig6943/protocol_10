@@ -1,4 +1,4 @@
-# protocol_10
+# protocol 10
 
 ![](protocol_10.png)
 
