@@ -30,9 +30,6 @@ for ext in so; do
     cp -v ./*.$ext ./AppDir/bin/ 2>/dev/null || :
 done
 
-# Copy exec (dont)
-#cp ./linux-$(uname -m)/protocol_10 ./AppDir/bin/
-
 # Make AppImage
 ./quick-sharun --make-appimage
 
