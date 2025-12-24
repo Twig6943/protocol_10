@@ -5,14 +5,18 @@ on:
 
 jobs:
   build:
-    name: Build on Ubuntu (${{ matrix.arch }})
-    runs-on: ubuntu-latest
-
+    name: "${{ matrix.name }} (${{ matrix.arch }})"
+    runs-on: ${{ matrix.runs-on }}
     strategy:
       matrix:
-        os:
-          - ubuntu-latest
-          - ubuntu-24.04-arm
+        include:
+          - runs-on: ubuntu-latest
+            name: Build AppImage
+            arch: x86_64
+          # comment out these 3 lines if aarch64 is not wanted
+          - runs-on: ubuntu-24.04-arm
+            name: Build AppImage
+            arch: aarch64
 
     steps:
       - name: Checkout Repository
