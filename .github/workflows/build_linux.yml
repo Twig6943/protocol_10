@@ -10,7 +10,9 @@ jobs:
 
     strategy:
       matrix:
-        arch: [x64, arm64]
+        os:
+          - ubuntu-latest
+          - ubuntu-24.04-arm
 
     steps:
       - name: Checkout Repository
