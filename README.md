@@ -9,3 +9,5 @@ protocol 10 is a mod decompiler for [frosty tool suite](https://github.com/CadeE
 ```sh
 ./protocol_10 input.fbmod output.fbproject
 ```
+
+[Discord server](https://discord.gg/sEs9NcUrF9)
