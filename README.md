@@ -7,7 +7,8 @@ protocol 10 is a mod decompiler for [frosty tool suite](https://github.com/CadeE
 ### usage
 
 ```sh
-./protocol_10 input.fbmod output.fbproject
+./protocol_10 input.fbmod output.fbproject /path/to/gameinstallation
+./protocol_10 input.fbmod output.fbproject -i #Convert without game installation with worse results
 ```
 
 [Discord server](https://discord.gg/sEs9NcUrF9)
